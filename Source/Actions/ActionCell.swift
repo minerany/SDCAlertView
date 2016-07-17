@@ -30,6 +30,8 @@ final class ActionCell: UICollectionViewCell {
         self.accessibilityLabel = action.attributedTitle?.string
         self.accessibilityTraits = UIAccessibilityTraitButton
         self.isAccessibilityElement = true
+        
+        self.contentView.backgroundColor = visualStyle .backgroundColor(forAction: action)
     }
 
     override func tintColorDidChange() {
